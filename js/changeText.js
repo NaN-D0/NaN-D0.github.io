@@ -1,6 +1,5 @@
 // change text of description box on hover of image
 
-const descriptions = document.getElementById("descriptions");
 const text = document.getElementById("text");
 
 const image1 = document.querySelector("#img1");
@@ -14,26 +13,15 @@ const image8 = document.querySelector("#img8");
 const image9 = document.querySelector("#img9");
 const image10 = document.querySelector("#img10");
 
-var gallery = [
-  [image1, image1.dataset.text],
-  [image2, image2.dataset.text],
-  [image3, image3.dataset.text],
-  [image4, image4.dataset.text],
-  [image5, image5.dataset.text],
-  [image6, image6.dataset.text],
-  [image7, image7.dataset.text],
-  [image8, image8.dataset.text],
-  [image9, image9.dataset.text],
-  [image10, image10.dataset.text],
-];
+var gallery = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10]
 
-var change = (imageArray) => {
+change = (imageArray) => {
   for (let i = 0; i < imageArray.length; i++) {
-    imageArray[i][0].onmouseover = (image) => {
-      text.textContent = imageArray[i][1];
+    imageArray[i].onmouseover = () => {
+      text.textContent = imageArray[i].dataset.text
     };
 
-    imageArray[i][0].onmouseout = (image) => {
+    imageArray[i].onmouseout = () => {
       text.textContent = "";
       text.insertAdjacentHTML(
         "afterbegin",

@@ -14,32 +14,23 @@ body {
 
 .container {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr 1fr 1fr;
-  justify-content: center;
-  text-align: center;
 }
 
-#descriptions {
+.descriptions {
   grid-column: 1/2;
   grid-row: 2/3;
   display: flex;
   flex-direction: column;
+  position: relative;
   justify-content: center;
   align-items: center;
-  border-right: 10px solid #add8e6;
-}
-
-#text {
-  width: 90%;
-  height: 90%;
   color: #add8e6;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  border-right: 10px solid #add8e6;
+  padding: 30px;
 }
 
 #homeLink {
@@ -51,11 +42,9 @@ body {
   color: white;
 }
 
-main {
+.building {
   display: grid;
   align-items: center;
-  height: 100%;
-  width: 100%;
   overflow-y: hidden;
   grid-column: 2/3;
   grid-row: 2/3;
@@ -87,11 +76,11 @@ main {
 .item {
   scroll-snap-align: start;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
   padding: 10px;
-  flex-direction: column;
 }
 
 .image {
@@ -181,5 +170,11 @@ main {
 @media only screen and (min-width: 700px) and (max-width: 900px) and (orientation: landscape) {
   .gallery {
     grid-template-columns: repeat(var(--galleryAmount), 20%);
+  }
+}
+
+@media only screen and (orientation: portrait) {
+  #descriptions {
+    border: 1px solid salmon;
   }
 }
