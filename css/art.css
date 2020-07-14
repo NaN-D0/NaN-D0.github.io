@@ -172,13 +172,13 @@ main {
   }
 }
 
-@media only screen and (min-width: 600px) and (max-width: 700px) {
+@media only screen and (min-width: 600px) and (max-width: 700px) and (orientation: landscape){
   .gallery {
     grid-template-columns: repeat(var(--galleryAmount), 25%);
   }
 }
 
-@media only screen and (min-width: 700px) and (max-width: 900px) {
+@media only screen and (min-width: 700px) and (max-width: 900px) and (orientation: landscape) {
   .gallery {
     grid-template-columns: repeat(var(--galleryAmount), 20%);
   }
