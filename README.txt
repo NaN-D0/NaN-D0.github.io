@@ -1,5 +1,8 @@
 Home Base
 
-home icon, random location with js
+
 
 cherry blossom with wind
+
+in the works:
+collapsible galleries
