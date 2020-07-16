@@ -12,8 +12,17 @@ const image7 = document.querySelector("#img7");
 const image8 = document.querySelector("#img8");
 const image9 = document.querySelector("#img9");
 const image10 = document.querySelector("#img10");
+const image11 = document.querySelector("#img11");
+const image12 = document.querySelector("#img12");
+const image13 = document.querySelector("#img13");
 
-var gallery = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10]
+var gallery = [
+  image1, image2, image3,
+  image4, image5, image6, 
+  image7, image8, image9, 
+  image10, image11, image12, 
+  image13
+              ]
 
 change = (imageArray) => {
   for (let i = 0; i < imageArray.length; i++) {

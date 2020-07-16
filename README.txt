@@ -8,3 +8,5 @@ in the works:
 collapsible galleries
 
 journal images stop at center
+
+memory palace*
