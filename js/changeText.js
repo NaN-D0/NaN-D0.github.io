@@ -1,19 +1,15 @@
 // change text of description box on hover of image
 
 const text = document.getElementById("text");
+var images = document.getElementsByClassName('image')
+var gallery = Array.from(images)
 
-const image1 = document.querySelector("#img1");
-const image2 = document.querySelector("#img2");
-const image3 = document.querySelector("#img3");
-const image4 = document.querySelector("#img4");
-const image5 = document.querySelector("#img5");
-const image6 = document.querySelector("#img6");
-const image7 = document.querySelector("#img7");
-const image8 = document.querySelector("#img8");
-const image9 = document.querySelector("#img9");
-const image10 = document.querySelector("#img10");
-
-var gallery = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10]
+/*
+Array.from(images).forEach(
+  () => {
+    console.log('hello')
+  })
+*/
 
 change = (imageArray) => {
   for (let i = 0; i < imageArray.length; i++) {
@@ -32,3 +28,43 @@ change = (imageArray) => {
 };
 
 change(gallery);
+
+// photoswipe
+// spread image array into items array with their source, width, height
+// create array made up of objects where each object is an images src, w, h from gallery
+
+/*
+var img12 = document.getElementById('img12')
+var sss = parseInt(img12.style.width)
+console.log(img12.style.width)
+
+openPhotoSwipe = () => {
+  var pswpElement = document.querySelectorAll('.pswp')[0]
+
+  var items = [
+    {
+      src: '../assets/gallery/swords.jpg',
+      w: sss,
+      h: 1000
+    },
+    {
+      src: '../assets/gallery/nicehat.jpg',
+      w: sss,
+      h: 1000
+    }
+  ]
+
+  var options = {
+    index: 0
+  }
+
+  var pswpGallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options)
+  pswpGallery.init()
+}
+
+var img = document.getElementById('img3')
+img.onclick = openPhotoSwipe
+
+//gallery.forEach(onclick = openPhotoSwipe)
+
+*/
