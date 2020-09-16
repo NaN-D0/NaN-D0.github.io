@@ -4,6 +4,13 @@ const text = document.getElementById("text");
 var images = document.getElementsByClassName('image')
 var gallery = Array.from(images)
 
+/*
+Array.from(images).forEach(
+  () => {
+    console.log('hello')
+  })
+*/
+
 change = (imageArray) => {
   for (let i = 0; i < imageArray.length; i++) {
     imageArray[i].onmouseover = () => {
